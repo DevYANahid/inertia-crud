@@ -1,6 +1,7 @@
-import { Link } from '@inertiajs/react'
+import { Link, usePage } from '@inertiajs/react'
 import React from 'react'
 const AdminLayouts = ({children}) => {
+    const {auth} = usePage().props;
   return (
     <>
         <header className="bg-black text-white py-10">
@@ -13,7 +14,7 @@ const AdminLayouts = ({children}) => {
                         <Link href='/dashboard'>Dashboard</Link>
                         <Link href='/todo'>ToDo</Link>
                     </div>
-                    <div>User</div>
+                    <div>{auth.user.name}</div>
                 </nav>
                 </div>
             </div>
