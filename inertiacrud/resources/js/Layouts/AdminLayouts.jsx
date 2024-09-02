@@ -14,7 +14,7 @@ const AdminLayouts = ({children}) => {
                         <Link href='/dashboard'>Dashboard</Link>
                         <Link href='/todo'>ToDo</Link>
                     </div>
-                    <div>{auth.user.name}</div>
+                    <div>{auth.user.name  }</div>
                 </nav>
                 </div>
             </div>
