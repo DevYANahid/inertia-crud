@@ -44,4 +44,10 @@ class TodoController extends Controller
         $todo->update($data);
         return redirect(route('todo.index'))->with('message','Todo updated successfully');
     }
+    public function delete(Todo $todo)
+    {
+        return Inertia::render('Edit',[
+            'todo' => $todo
+        ]);
+    }
 }
